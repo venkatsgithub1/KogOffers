@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "ad6554d9-532f-4657-b5fb-de278a4c47ec",
+		"name": "offers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getting offers created",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/kog/api/collect/offer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kog",
+						"api",
+						"collect",
+						"offer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating offers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"test2\",\r\n        \"\": \"2021-01-01\",\r\n        \"validTill\": \"2022-05-31\",\r\n        \"locationId\": {\r\n            \"latitude\": \"51.5074° N\",\r\n            \"longitude\": \"0.1278° W\"\r\n        },\r\n        \"imageObjectUrl\": \"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kog/api/collect/offer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kog",
+						"api",
+						"collect",
+						"offer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pagination test",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/kog/api/collect/offerByValidFromDescAndPagination?pages=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kog",
+						"api",
+						"collect",
+						"offerByValidFromDescAndPagination"
+					],
+					"query": [
+						{
+							"key": "pages",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swagger json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
